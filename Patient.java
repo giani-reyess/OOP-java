@@ -7,10 +7,18 @@ public class Patient extends User{
         super(name, email, birthday);       
     }
 
+    // Overwriting the "toString" method
     @Override
     public String toString(){
         return super.toString() + "\nAge: " +getBirthday()+ "\n Weight:" 
         +getWeight()+ "\n Height: " +getHeight()+ "\n Blood: " +blood;
+    }
+
+    // Overwriting the "showUser" method
+    @Override
+    public void showUser() {
+        System.out.println("Role: Pacient");
+        System.out.println("Hospital: Cruz Roja");
     }
 
     // 54.5

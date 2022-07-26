@@ -10,9 +10,17 @@ public class Doctor extends User{
         super(name, email, birthday);
     }
 
+    
     @Override
     public String toString(){
         return super.toString() + "\n User: " +speciality+ ", Avaible: " +avaibleAPpointments.toString();
+    }
+
+    @Override
+    public void showUser() {
+        System.out.println("Role: Employee");
+        System.out.println("Hospital: Cruz Roja");
+        System.out.println("Departament: Oncologia");
     }
     
     
@@ -51,6 +59,7 @@ public class Doctor extends User{
         public String toString(){
             return super.toString() + "\n Date: " +date+ ", \n Time: " + time;
         }
+        
 
         public Date getDate() {
             return date;
@@ -71,6 +80,5 @@ public class Doctor extends User{
         public int getId() {
             return id;
         }
-
     }
 } 

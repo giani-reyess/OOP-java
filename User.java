@@ -1,4 +1,5 @@
-public class User {
+// User is an abstract class (intended to extend other classes)
+public abstract class User {
     private int id;
     private String name;
     private String email;
@@ -27,6 +28,9 @@ public class User {
                 "\n Adress: " +address+". Phone: " +phoneNumber;
     }
 
+    public abstract void showUser();
+
+    // Getters
     public String getAddress() {
         return address;
     }
@@ -47,6 +51,12 @@ public class User {
         return phoneNumber;
     }
 
+    public String getBirthday() {
+        return birthday;
+    }
+
+
+    // Setters
     public void setAddress(String address) {
         this.address = address;
     }
@@ -61,10 +71,6 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getBirthday() {
-        return birthday;
     }
 
     public void setBirthday(String birthday) {
